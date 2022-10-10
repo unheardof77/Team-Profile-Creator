@@ -1,0 +1,26 @@
+{
+  "name": "team-profile-creator",
+  "version": "1.0.0",
+  "description": "This application will allow you to create profiles for all of your team members.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unheardof77/Team-Profile-Creator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unheardof77/Team-Profile-Creator/issues"
+  },
+  "homepage": "https://github.com/unheardof77/Team-Profile-Creator#readme",
+  "dependencies": {
+    "jest": "^29.1.2"
+  }
+}
