@@ -1,9 +1,8 @@
-const Engineer = require("../lib/Engineer");
-const Manager = require("../lib/Manager");
-const arrayOfHumans = [];
-
-const getSpecial = (data, i) => {
-    const human = data[i];
+//This array is an array of cards for each human in the team.
+const arrayOfHumanCards = [];
+//this returns the correct string to the generateCard function
+const getSpecial = (data) => {
+    const human = data;
     const role = human.getRole()
     if (role === `Manager`){
         return `Office Number: ${human.getOfficeNumber()}`;
@@ -13,13 +12,11 @@ const getSpecial = (data, i) => {
         return `School: ${human.getSchool()}`
     };
 };
-
+//This returns all of the card information after receiving information from getSpecial function.
 const generateCard = (data) =>{
     for(i=0; i < data.length; i++){
-        console.log(`happened`)
-        arrayOfHumans.push(`       
+        arrayOfHumanCards.push(`       
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body bg-primary color-white">
             <h5 class="card-title">${data[i].getName()}</h5>
             <p class="card-text">${data[i].getRole()}</p>
@@ -27,15 +24,16 @@ const generateCard = (data) =>{
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${data[i].getId()}</li>
             <li class="list-group-item">Email: <a href="mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
-            <li class="list-group-item">${getSpecial(data, i)}</li>
+            <li class="list-group-item">${getSpecial(data[i])}</li>
         </ul>
     </div>`);
     };
-    return arrayOfHumans.join(`
-`)
+    return arrayOfHumanCards.join(`
+    
+    `)
 };
 
-
+//This is the main template for the html.  It has the head and body information.
 const generateHTML = (data) =>`
 <!DOCTYPE html>
 <html lang="en">
@@ -63,5 +61,5 @@ const generateHTML = (data) =>`
 
 </html>
 `;
-
+//This exports the generateHTML function allowing it to be used in the index.js file.
 module.exports = generateHTML;
