@@ -26,13 +26,13 @@ const generateCard = (data) =>{
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${data[i].getId()}</li>
-            <li class="list-group-item">Email: ${data[i].getEmail()}</li>
+            <li class="list-group-item">Email: <a href="mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
             <li class="list-group-item">${getSpecial(data, i)}</li>
         </ul>
     </div>`);
     };
     return arrayOfHumans.join(`
-    `)
+`)
 };
 
 

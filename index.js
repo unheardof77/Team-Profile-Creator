@@ -83,8 +83,8 @@ const intern= () =>{
     })
 };
 const startGenerate= (data) =>{
-    console.log(data)
-    fs.writeFile(`TeamChart.html`, generateHTML(data), (err) => err ? console.log(err) : console.log(`HTML document successfully generated!`))
+    data.sort((a,b) => a.importance - b.importance)
+    fs.writeFile(`./dist/TeamChart.html`, generateHTML(data), (err) => err ? console.log(err) : console.log(`HTML document successfully generated!`))
 };
 
 function init(){
