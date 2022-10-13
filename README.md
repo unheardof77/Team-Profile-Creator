@@ -20,7 +20,7 @@ Make sure you have node js installed first, then in your git bash run the comman
 ## Usage
 
 After running the command `npm i` type `node index.js` in the git bash terminal then answer the prompts that follow.  After you complete all prompts a HTML file will be generated with the input you provided.
-[Walk through video](https://drive.google.com/file/d/1TdUoUYMZ_6uu3dhmEoYikTmWICb4OuiN/view)
+[Walk through video](https://drive.google.com/file/d/1TdUoUYMZ_6uu3dhmEoYikTmWICb4OuiN/view?usp=sharing)
 ## Credits
 
 There were no collaborators.
